@@ -112,3 +112,90 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"wM0kUAuTuVVs64yO9C+2FgVExLWEkXYBL4fHjMvdHb/wXQBnEIZ1bXK7fKn5neP40gN03qULwt9kcGv5dkFKWg==", "commit"=>"Submit Post", "controller"=>"posts", "description"=>"asdf", "title"=>"Rails Introduction Quiz", "utf8"=>"✓"}}
   Rendered posts/new.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-10-15 16:01:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/trinacria/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 100ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-10-15 16:01:32 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 991ms (Views: 986.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2018-10-15 16:01:33 -0400
+
+
+Started GET "/posts/new" for ::1 at 2018-10-15 16:01:39 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 92ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=lol&post%5Bdescription%5D=lol&authenticity_token=nnkJGXEr5%2BkSzLduI9zuuNvuiVe9a45L5Xg32eNDXuEXLe8r7vJM0S6cA9vCOOpicxI1VW2qFpOQ%2BAs5IgUALw%3D%3D" for ::1 at 2018-10-15 16:01:45 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"lol", "description"=>"lol"}, "authenticity_token"=>"nnkJGXEr5+kSzLduI9zuuNvuiVe9a45L5Xg32eNDXuEXLe8r7vJM0S6cA9vCOOpicxI1VW2qFpOQ+As5IgUALw=="}
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-10-15 16:03:48 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 143ms (Views: 141.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-10-15 16:03:53 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p/E8+tSVLaASwhhilVORtRsq95+fhWbaGKcCK2HCwdAupdrIS0yGmC6SrNd0t5Vvs9ZLnU9E/gJtJz7LoISfHg==", "post"=>{"title"=>"xsx", "description"=>"sxsx"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (19.6ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "xsx"], ["description", "sxsx"], ["created_at", "2018-10-15 20:03:53.873350"], ["updated_at", "2018-10-15 20:03:53.873350"]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 343ms (ActiveRecord: 24.1ms)
+
+
+Started GET "/posts" for ::1 at 2018-10-15 16:03:53 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 148ms (Views: 134.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for ::1 at 2018-10-15 16:05:11 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p/E8+tSVLaASwhhilVORtRsq95+fhWbaGKcCK2HCwdAupdrIS0yGmC6SrNd0t5Vvs9ZLnU9E/gJtJz7LoISfHg==", "post"=>{"title"=>"xsx", "description"=>"sxsx"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (33.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "xsx"], ["description", "sxsx"], ["created_at", "2018-10-15 20:05:11.519578"], ["updated_at", "2018-10-15 20:05:11.519578"]]
+  [1m[36m (159.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 199ms (ActiveRecord: 193.4ms)
+
+
+Started GET "/posts" for ::1 at 2018-10-15 16:05:11 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 171ms (Views: 170.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for ::1 at 2018-10-15 16:06:46 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p/E8+tSVLaASwhhilVORtRsq95+fhWbaGKcCK2HCwdAupdrIS0yGmC6SrNd0t5Vvs9ZLnU9E/gJtJz7LoISfHg==", "post"=>{"title"=>"xsx", "description"=>"sxsx"}}
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "xsx"], ["description", "sxsx"], ["created_at", "2018-10-15 20:06:46.967463"], ["updated_at", "2018-10-15 20:06:46.967463"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 32ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/posts" for ::1 at 2018-10-15 16:06:47 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 162ms (Views: 161.1ms | ActiveRecord: 0.4ms)
